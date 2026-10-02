@@ -1,4 +1,4 @@
-const LIFE_LANDS_ASSET_URL = "https://lifelands.ir/api/v1";
+const LIFE_LANDS_ASSET_URL = "https://dl.lifelands.ir";
 
 export function getGameImageUrl(imagePath: string): string {
   if (imagePath.startsWith("http")) {

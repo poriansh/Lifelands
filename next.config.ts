@@ -5,7 +5,7 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "lifelands.ir",
+        hostname: "dl.lifelands.ir",
       },
     ],
   },
