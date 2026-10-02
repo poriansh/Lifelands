@@ -1,8 +1,12 @@
 import { ApiResponse, GamesPage } from "@/feature/game/types/api-modal";
 
-const GAMES_API_URL = "https://lifelands.ir/api/v1/games";
+const GAMES_API_URL = process.env.GAMES_API_URL;
 
 export async function getGames(): Promise<ApiResponse<GamesPage>> {
+  if (!GAMES_API_URL) {
+    throw new Error("GAMES_API_URL is not configured");
+  }
+
   const response = await fetch(GAMES_API_URL, {
     next: {
       revalidate: 60,
